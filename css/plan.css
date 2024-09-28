@@ -1,0 +1,145 @@
+.plan-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+    margin: 50px 0;
+    flex-wrap: wrap;
+}
+
+.plan {
+    background-color: #171717;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 15px;
+    padding: 30px;
+    width: calc(25% - 50px);
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.plan:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px) scale(1.05);
+}
+
+.plan-title {
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.month-text {
+    color: #777;
+    font-size: 1rem;
+    margin-left: 5px;
+}
+
+.plan-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 5px;
+    display: inline;
+}
+
+.plan-divider {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    margin: 15px 0;
+}
+
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.plan-features li {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #B0B0B0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.plan-features li i {
+    margin-right: 5px;
+}
+
+.plan-features li span {
+    margin: 0;
+    padding: 0;
+}
+
+.plan-features li span:first-child {
+    text-align: center;
+    width: 75%;
+}
+
+.plan-features li span:last-child {
+    text-align: right;
+    width: 75%;
+}
+
+.plan-btn {
+    background-color: rgba(28, 28, 28, 0.8);
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 2px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'Onest', sans-serif;
+    font-weight: 800;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plan-btn:hover {
+    background-color: rgba(44, 44, 44, 0.8);
+    color: #ffffff;
+}
+
+.guarantee-text {
+    color: #777;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .plan-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+    }
+
+    .plan {
+        padding: 20px;
+        width: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    .plan-title {
+        font-size: 1.5rem;
+    }
+
+    .plan {
+        padding: 20px;
+        width: 500px;
+    }
+
+    .plan-grid {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 20px;
+    }
+
+    .plan-price {
+        font-size: 1.5rem;
+    }
+}
